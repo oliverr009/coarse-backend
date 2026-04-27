@@ -1,0 +1,24 @@
+{
+  "name": "coarse-technologies/backend",
+  "description": "Laravel backend starter for Coarse Technologies ecommerce/admin panel",
+  "type": "project",
+  "require": {
+    "php": "^8.1",
+    "laravel/framework": "^10.0|^11.0",
+    "laravel/sanctum": "^3.0|^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ]
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
